@@ -27,6 +27,7 @@ class Matches(APIView):
 class MatchMaker(APIView):
     def post(self, request):
         auth = get_authorization_header(request).split()
+        print(auth)
         if auth and len(auth) == 2:
             token = auth[1].decode('utf-8')
             id = decode_access_token(token)
