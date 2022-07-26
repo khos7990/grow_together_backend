@@ -42,7 +42,6 @@ class MatchMaker(APIView):
             plant_image=image)
 
             return Response('success')
-        return Response('failed', auth)
         raise AuthenticationFailed('unauthenticated')
        
 
